@@ -1,4 +1,3 @@
-
 # Welcome to BDD with Cypress and Cucumber!
 Tutorial to start to implement E2E with Cucumber and Cypress and don't die trying it.
 ## Let's do start!: Installation

@@ -1,4 +1,4 @@
-Feature: Sanitas Login
+Feature: Login
 
   Scenario Outline: Login OK
 
