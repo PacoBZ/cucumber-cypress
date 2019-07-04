@@ -97,4 +97,4 @@ In this project you can find another examples on [Cypress section](https://githu
 
 ## Your turn!
 
-Let's try to download the poject and replace the "fake" usersMail and Pass **Strings** on [loginPageObject.js](https://github.com/PacoBZ/cucumber-cypress/blob/master/cypress/integration/login/Login.feature) file with your own Apliccation login DOM references.
+Let's try to download the poject and replace the "fake" usersMail and Pass **Strings** on [loginPageObject.js](https://github.com/PacoBZ/cucumber-cypress/blob/master/cypress/integration/login/Login/loginPageObject.js) file with your own Apliccation login DOM references.
