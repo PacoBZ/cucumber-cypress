@@ -4,7 +4,7 @@ class LoginPage {
     }
 
     goWeb() {
-        cy.visit(''); //Login Page Url
+        cy.visit('www.google.com'); //Login Page Url
     }
 
     getEmailInput() {

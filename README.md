@@ -63,7 +63,16 @@ In this case, I created a StepFile to access to login webpage and another to col
   
 But part of the equation is still missing, how do we interact with the DOM? Ok, it's time to talk about the PageObjects.
 ### PageObjects
+At PageObjects files we''ll make an Objects that represents the Feature WebPage/s and the elements on it as well as other generic methods to deal with it.
 
+<a href="https://ibb.co/b1tmRHw"><img src="https://i.ibb.co/kKZB63b/Captura-de-pantalla-2019-07-04-a-las-12-07-29.png" alt="Captura-de-pantalla-2019-07-04-a-las-12-07-29" border="0"></a>
+
+And that's the part where Cypress helps you!
+<a href="https://ibb.co/vJCT7q0"><img src="https://i.ibb.co/FBkyS3R/Captura-de-pantalla-2019-07-04-a-las-12-17-18.png" alt="Captura-de-pantalla-2019-07-04-a-las-12-17-18" border="0"></a>
+Cypress has a really useful interface where you can interact and search the elements you want to interact with.
+But that's not all, Cypress has a lot of interesting features to make easy your E2E test.
+In this project you can find another examples on [Cypress section](https://github.com/PacoBZ/cucumber-cypress/blob/master/cypress/README.md)
+> **Note:** Go to the Cypress Tips readme to see more about how Cypress helps you
 ## Fixtures
 ## Commands Folder
 
