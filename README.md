@@ -6,6 +6,17 @@
 That's all you need to install!
 
 ## Integration
+Folder Structure
+Integration
+|
+|---->featureFolder
+					|---->codeIntegrationFolder
+					|			|---->pageObject.js
+					|			|---->stepsIntegration.js
+					|
+					|---->featureName.feature
+
+
 ## Fixtures
 ## Commands Folder
 
@@ -17,6 +28,7 @@ That's all you need to install!
 You only have to change the "fake" usersMail and Pass with your own login data!
 
 ### Basic Flow
+
 ```mermaid
 graph LR
 A(Gherkin Example) 
