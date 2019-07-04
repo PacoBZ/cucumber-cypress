@@ -6,7 +6,7 @@
   "scripts": {
     "test": "node_modules/.bin/cypress run",
     "open": "node_modules/.bin/cypress open",
-    "report": "npx mochawesome-merge --reportDir cypress/reports/mocha > mochawesome.json;npx mochawesome-report-generator mochawesome.json"
+    "report": "npx mochawesome-merge --reportDir cypress/reports/mocha > mochawesome.json;npx mochawesome-report-generator mochawesome.json; rm - rf /reports/"
   },
   "keywords": [
     "cypress",
@@ -15,9 +15,11 @@
   ],
   "author": "Francisco Barea",
   "dependencies": {
+    "cucumber-html-reporter": "^5.0.0",
     "cypress-cucumber-preprocessor": "^1.12.0",
     "cypress-multi-reporters": "^1.1.22",
-    "mocha-junit-reporters": "^1.23.6"
+    "mocha-junit-reporters": "^1.23.6",
+    "protractor": "^5.4.2"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
