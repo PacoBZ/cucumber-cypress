@@ -63,6 +63,7 @@ We can define as many cases as Example lines we add to the table. That "words" r
 ### StepDefinition
 
 The next step is translate the definition to code. At "codeIntegrationFolder" we'll create as many files as steps we need to separate. **Look at example:**
+
 <a href="https://ibb.co/BZp4GzF"><img src="https://i.ibb.co/580YkMw/Captura-de-pantalla-2019-07-04-a-las-11-40-14.png" alt="Captura-de-pantalla-2019-07-04-a-las-11-40-14" border="0"></a>
 
 In this case, I created a StepFile to access to login webpage and another to collect the writing email, password and the confirmation button.
