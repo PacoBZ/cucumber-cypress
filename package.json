@@ -1,0 +1,32 @@
+{
+  "name": "cypress-cucumber-example",
+  "version": "1.0.0",
+  "description": "Example of cypress with cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/cypress run",
+    "open": "node_modules/.bin/cypress open",
+    "report": "npx mochawesome-merge --reportDir cypress/reports/mocha > mochawesome.json;npx mochawesome-report-generator mochawesome.json"
+  },
+  "keywords": [
+    "cypress",
+    "cucumber",
+    "testing"
+  ],
+  "author": "Francisco Barea",
+  "dependencies": {
+    "cypress-cucumber-preprocessor": "^1.12.0",
+    "cypress-multi-reporters": "^1.1.22",
+    "mocha-junit-reporters": "^1.23.6"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  },
+  "devDependencies": {
+    "cypress": "^3.3.2",
+    "mocha": "^6.1.4",
+    "mochawesome": "^4.0.1",
+    "mochawesome-merge": "^2.0.1",
+    "mochawesome-report-generator": "^4.0.0"
+  }
+}
