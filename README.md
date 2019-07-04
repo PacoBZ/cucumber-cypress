@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7e93dda0505c758c969b835826ef5f306be87348
 # Welcome to BDD with Cypress and Cucumber!
 ## Installation
 `npm install `
@@ -19,6 +22,10 @@ Integration
 
 ## Fixtures
 ## Commands Folder
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7e93dda0505c758c969b835826ef5f306be87348
 
 |userMail                        |userPassword              |
 |-------------------------------|---------------------------|
