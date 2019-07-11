@@ -1,7 +1,7 @@
 {
-  "name": "cypress-cucumber-example",
+  "name": "cucumber-cypress",
   "version": "1.0.0",
-  "description": "Example of cypress with cucumber",
+  "description": "Example/tutorial about how to implement cypress with cucumber",
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/cypress run",
