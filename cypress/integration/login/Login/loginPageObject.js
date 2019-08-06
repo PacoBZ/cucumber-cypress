@@ -4,19 +4,19 @@ class LoginPage {
     }
 
     goWeb() {
-        cy.visit(''); //Login Page Url
+        cy.visit('https://s1.demo.opensourcecms.com/wordpress/wp-login.php'); //Login Page Url
     }
 
     getEmailInput() {
-        return cy.get('') //Login User email Input
+        return cy.get('#user_login') //Login User email Input
     }
 
     getPasswordInput() {
-        return cy.get('') //Login User password Input
+        return cy.get('#user_pass') //Login User password Input
     }
 
     getLoginAccessButton() {
-        return cy.get('') //Login Access Button
+        return cy.get('#wp-submit') //Login Access Button
     }
 
 }

@@ -3,7 +3,7 @@ import LoginPage from "../login/Login/loginPageObject";
 
 const loginpage = new LoginPage();
 
-Given('Im logged on Sanitas Smile', () => {
+Given('Im logged', () => {
     loginpage.goWeb()
 
     cy.fixture('login.json').as('loginData')

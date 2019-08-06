@@ -10,4 +10,4 @@ Feature: Login
 
     Examples:
       | email             | password          |
-      | "usermailexample" | "passwordExample" |
+      | "opensourcecms" | "opensourcecms" |
