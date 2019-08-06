@@ -98,4 +98,10 @@ In this project you can find another examples on [Cypress section](https://githu
 
 ## Your turn!
 
-Let's try to download the poject and replace the "fake" usersMail and Pass **Strings** on [loginPageObject.js](https://github.com/PacoBZ/cucumber-cypress/blob/master/cypress/integration/login/Login/loginPageObject.js) file with your own Apliccation login DOM references.
+Change to the branch ```login-example-completed``` to see for an example with a complete login test.
+
+```git checkout login-example-completed```
+
+[Complete Login Example Reference](https://github.com/PacoBZ/cucumber-cypress/tree/login-example-completed)
+
+And then... let's try to download the project and replace the "fake" usersMail and Pass **Strings** on [loginPageObject.js](https://github.com/PacoBZ/cucumber-cypress/blob/master/cypress/integration/login/Login/loginPageObject.js) file with your own Application login DOM references.
