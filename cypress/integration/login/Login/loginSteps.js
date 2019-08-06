@@ -17,11 +17,6 @@ When('I press the access button', (email) => {
 });
 
 Given('I am on home page', () => {
-    cy.server()
-    cy.route('GET','/user/data/Example/get').as('userDataRequest')
-    
-    cy.wait('@userDataRequest')
-
-    cy.title().should("include", "HOME");
+    cy.title().should("include", "Dashboard");
 });
 
