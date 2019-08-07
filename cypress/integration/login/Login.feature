@@ -9,5 +9,5 @@ Feature: Login
     Then I am on home page
 
     Examples:
-      | email             | password          |
+      | email           | password        |
       | "opensourcecms" | "opensourcecms" |

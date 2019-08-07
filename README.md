@@ -1,101 +1,60 @@
 
-# Welcome to BDD with Cypress and Cucumber!
+# Login Example Completed
 
-Tutorial to start to implement E2E with Cucumber and Cypress and don't die trying it.
+This branch has the master's branch example completed.
 
-## Let's do start!: Installation
+## Completing the DOM reference
 
-`npm install`
+For this example, we will to use the example website ```https://s1.demo.opensourcecms.com/wordpress/wp-login.php```
 
-That's all you need to install!
+So the Page Object class will look like this.
 
-### Dependencies
+<a href="https://ibb.co/2KnmQY6"><img src="https://i.ibb.co/F7xNMqW/Captura-de-pantalla-2019-08-06-a-las-14-28-35.png" alt="Captura-de-pantalla-2019-08-06-a-las-14-28-35" border="0"></a>
 
-"cypress": " [https://www.cypress.io/](https://www.cypress.io/)
+References to the different elements of the login website have been filled in.
 
-"mocha": "[https://mochajs.org/](https://mochajs.org/)
+Then, look at the ```.feature``` file, now it shows the true user name and password of the website in the "Example" table.
+ 
+ ```Username: opensourcecms ```
 
-"mochawesome": " [https://www.npmjs.com/package/mochawesome](https://www.npmjs.com/package/mochawesome)
+ ```Password: opensourcecms ```
 
-"mochawesome-merge": " [https://www.npmjs.com/package/mochawesome-merge](https://www.npmjs.com/package/mochawesome-merge)
 
-"mochawesome-report-generator": "[https://www.npmjs.com/package/mochawesome-report-generator](https://www.npmjs.com/package/mochawesome-report-generator)
 
-# How it Works?
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/ThMmQhh/Captura-de-pantalla-2019-08-07-a-las-9-19-48.png" alt="Captura-de-pantalla-2019-08-07-a-las-9-19-48" border="0"></a>
+***
+## Commands
 
-### Console commands to launch
+Another way to make login is throught commands. When you have an action that you may repeat a lot, an optimal way is make a cypress command.
 
-`npm run test` => Launch cypress Test on "headless" mode
+<a href="https://ibb.co/jWTxVsT"><img src="https://i.ibb.co/3M78fQ7/Captura-de-pantalla-2019-08-07-a-las-9-24-50.png" alt="Captura-de-pantalla-2019-08-07-a-las-9-24-50" border="0"></a>
 
-`npm run open` => Open the Cypress interface to launch Test manually
+You can see it at [commands.js](https://github.com/PacoBZ/cucumber-cypress/blob/login-example-completed/cypress/support/commands.js), and add another commands that you need.
 
-`npm run report` => Unifies the generated reports generated
+***
 
-## Integration
+The next step is create a common integration step to use it:
 
-The integration folder has the biggest part of our code, you 'll create as many folder as Features you want to test.
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/tYmTFD8/Captura-de-pantalla-2019-08-07-a-las-9-36-27.png" alt="Captura-de-pantalla-2019-08-07-a-las-9-36-27" border="0"></a>
 
-Inside of each **feature folder** you'll create a code integration folder and a feature when you'll define the behaviour of the test.
+You can see it at [loginStep.js](https://github.com/PacoBZ/cucumber-cypress/blob/login-example-completed/cypress/integration/common/loginStep.js)
 
-**Folder Structure**
+But, as you can see, I used a different form to get the user info, that's the fixtures.
 
-<a href="https://ibb.co/tKp0SnF"><img src="https://i.ibb.co/dM4NSXx/Captura-de-pantalla-2019-07-04-a-las-9-45-09.png" alt="Captura-de-pantalla-2019-07-04-a-las-9-45-09" border="0"></a>
+***
 
-You can find an example about how can be a **Login feature** treatment.
+## Fixtures
 
-## Lets go see it!
+Fixtures are files that encapsule reusable information, for example, login information:
 
-### Features
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/NK1n97M/Captura-de-pantalla-2019-08-07-a-las-9-50-25.png" alt="Captura-de-pantalla-2019-08-07-a-las-9-50-25" border="0"></a>
 
-First of all we'll find the ".feature" file where we'll define, with a human language (Gherkin), the behaviour of the feature.
-<a href="https://ibb.co/pQxL2ZY"><img src="https://i.ibb.co/XDbCXpc/Captura-de-pantalla-2019-07-04-a-las-11-33-09.png" alt="Captura-de-pantalla-2019-07-04-a-las-11-33-09" border="0"></a>
+To invoke them, use and "alias", for example:
 
-We can define as many cases as Example lines we add to the table. That "words" replace the "<>" variables.
+```cy.fixture('login.json').as('loginData')```
 
-|			email               |      password             |
-|-------------------------------|---------------------------|
-|         'UserMail1'           |'UserPassword1'            |
-|         'UserMail2'           |"UserPassword2"            |
-|         'UserMail3'           |"UserPassword3"            |
+Then use the content in combination with the command "login".
 
-> **Note:** For more information about **Gherkin** visit [https://cucumber.io/docs/gherkin/](https://cucumber.io/docs/gherkin/)
+<a href="https://ibb.co/LYHkywM"><img src="https://i.ibb.co/zQDngc1/Captura-de-pantalla-2019-08-07-a-las-14-43-29.png" alt="Captura-de-pantalla-2019-08-07-a-las-14-43-29" border="0"></a>
 
-### StepDefinition
-
-The next step is translate the definition to code. At "codeIntegrationFolder" we'll create as many files as steps we need to separate. **Look at example:**
-
-<a href="https://ibb.co/BZp4GzF"><img src="https://i.ibb.co/580YkMw/Captura-de-pantalla-2019-07-04-a-las-11-40-14.png" alt="Captura-de-pantalla-2019-07-04-a-las-11-40-14" border="0"></a>
-
-In this case, I created a StepFile to access to login webpage and another to collect the writing email, password and the confirmation button.
-
-**Login Page Access**
-
-<a href="https://ibb.co/tcz5S2t"><img src="https://i.ibb.co/J2qPNp4/Captura-de-pantalla-2019-07-04-a-las-11-45-16.png" alt="Captura-de-pantalla-2019-07-04-a-las-11-45-16" border="0"></a>
-
-**Login Steps**
-
-<a href="https://ibb.co/Rgh3PTN"><img src="https://i.ibb.co/HKNtYTC/Captura-de-pantalla-2019-07-04-a-las-11-45-28.png" alt="Captura-de-pantalla-2019-07-04-a-las-11-45-28" border="0"></a>
-
-  
-But part of the equation is still missing, how do we interact with the DOM? Ok, it's time to talk about the PageObjects.
-
-### PageObjects
-
-At PageObjects files we''ll make an Objects that represents the Feature WebPage/s and the elements on it as well as other generic methods to deal with it.
-
-<a href="https://ibb.co/b1tmRHw"><img src="https://i.ibb.co/kKZB63b/Captura-de-pantalla-2019-07-04-a-las-12-07-29.png" alt="Captura-de-pantalla-2019-07-04-a-las-12-07-29" border="0"></a>
-
-And that's the part where Cypress helps you!
-
-<a href="https://ibb.co/vJCT7q0"><img src="https://i.ibb.co/FBkyS3R/Captura-de-pantalla-2019-07-04-a-las-12-17-18.png" alt="Captura-de-pantalla-2019-07-04-a-las-12-17-18" border="0"></a>
-
-Cypress has a really useful interface where you can interact and search the elements you want to interact with.
-But that's not all, Cypress has a lot of interesting features to make easy your E2E test.
-
-In this project you can find another examples on [Cypress section](https://github.com/PacoBZ/cucumber-cypress/blob/master/cypress/README.md) of this project
-
-> **Note:** You can go directly to the official [Cypress Documentation](https://docs.cypress.io/guides/overview/why-cypress.html#In-a-nutshell) if you prefer
-
-## Your turn!
-
-Let's try to download the poject and replace the "fake" usersMail and Pass **Strings** on [loginPageObject.js](https://github.com/PacoBZ/cucumber-cypress/blob/master/cypress/integration/login/Login/loginPageObject.js) file with your own Apliccation login DOM references.
+To finish, change the step in the ```Login.feature``` file to call the new step. Now ```npm run test``` and try it!
