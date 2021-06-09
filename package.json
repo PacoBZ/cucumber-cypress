@@ -6,7 +6,7 @@
   "scripts": {
     "test": "node_modules/.bin/cypress run",
     "open": "node_modules/.bin/cypress open",
-    "report": "npx mochawesome-merge --reportDir cypress/reports/mocha > mochawesome.json;npx mochawesome-report-generator mochawesome.json; rm - rf /reports/"
+    "report": "npx mochawesome-merge --reportDir cypress/reports/mocha > mochawesome.json;npx mochawesome-report-generator mochawesome.json; rm -rf cypress/reports/"
   },
   "keywords": [
     "cypress",
@@ -25,7 +25,7 @@
     "nonGlobalStepDefinitions": true
   },
   "devDependencies": {
-    "cypress": "^3.3.2",
+    "cypress": "^5.1.0",
     "mocha": "^6.1.4",
     "mochawesome": "^4.0.1",
     "mochawesome-merge": "^2.0.1",
