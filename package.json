@@ -6,7 +6,7 @@
   "scripts": {
     "test": "node_modules/.bin/cypress run",
     "open": "node_modules/.bin/cypress open",
-    "report": "npx mochawesome-merge --reportDir cypress/reports/mocha > mochawesome.json;npx mochawesome-report-generator mochawesome.json; rm - rf /reports/"
+    "report": "npx mochawesome-merge --reportDir cypress/reports/mocha > mochawesome.json;npx mochawesome-report-generator mochawesome.json; rm -rf cypress/reports/"
   },
   "keywords": [
     "cypress",
